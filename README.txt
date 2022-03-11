@@ -1,9 +1,1 @@
-Clone me
-parchment is setup already
-things to change:
-Package structure
-mods.toml
-emptymod.java beneath @Mod
-build.gradle:
-    archivesBaseName
-    ctrl r 'emptymod'
+Unburned is a mod that adds non-flammable variants of all wood blocks.
