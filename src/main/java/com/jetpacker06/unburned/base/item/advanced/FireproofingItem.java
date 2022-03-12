@@ -1,4 +1,4 @@
-package com.jetpacker06.unburned.vanilla.item.advanced;
+package com.jetpacker06.unburned.base.item.advanced;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -11,9 +11,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class FireproofingItem extends Item {
-    public FireproofingItem(Properties pProperties) {
-        super(pProperties);
-    }
+    public FireproofingItem(Properties pProperties) {super(pProperties);}
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {

@@ -1,5 +1,6 @@
 {
   "item.unburned.fireproofing":"Fireproofing",
+  "block.unburned.fireproof_oak_log": "Fireproof Oak Log",
   "itemGroup.Unburned": "Unburnable",
-  "tooltip.unburned.fireproofing.tooltip": "Craft with wooden blocks to fireproof them."
+  "tooltip.unburned.fireproofing.tooltip": "§o§8Craft with wooden blocks to fireproof them§8§o."
 }
