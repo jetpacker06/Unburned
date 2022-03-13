@@ -15,5 +15,12 @@
   "block.unburned.fireproof_stripped_spruce_log": "Fireproof Stripped Spruce Log",
   "block.unburned.fireproof_stripped_birch_log": "Fireproof Stripped Birch Log",
   "block.unburned.fireproof_stripped_jungle_log": "Fireproof Stripped Jungle Log",
-  "block.unburned.fireproof_stripped_acacia_log": "Fireproof Stripped Acacia Log"
+  "block.unburned.fireproof_stripped_acacia_log": "Fireproof Stripped Acacia Log",
+
+  "block.unburned.fireproof_oak_planks": "Fireproof Oak Planks",
+  "block.unburned.fireproof_dark_oak_planks": "Fireproof Dark Oak Planks",
+  "block.unburned.fireproof_spruce_planks": "Fireproof Spruce Planks",
+  "block.unburned.fireproof_birch_planks": "Fireproof Birch Planks",
+  "block.unburned.fireproof_jungle_planks": "Fireproof Jungle Planks",
+  "block.unburned.fireproof_acacia_planks": "Fireproof Acacia Planks"
 }

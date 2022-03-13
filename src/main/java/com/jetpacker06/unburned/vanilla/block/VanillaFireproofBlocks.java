@@ -42,6 +42,13 @@ public class VanillaFireproofBlocks {
     public static final RegistryObject<Block> FIREPROOF_STRIPPED_JUNGlE_LOG = registerBlock("fireproof_stripped_jungle_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_STRIPPED_ACACIA_LOG = registerBlock("fireproof_stripped_acacia_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
 
+    //planks
+    public static final RegistryObject<Block> FIREPROOF_OAK_PLANKS = registerBlock("fireproof_oak_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_DARK_OAK_PLANKS = registerBlock("fireproof_dark_oak_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_SPRUCE_OAK_PLANKS = registerBlock("fireproof_spruce_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_BIRCH_PLANKS = registerBlock("fireproof_birch_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_JUNGLE_PLANKS = registerBlock("fireproof_jungle_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_ACACIA_PLANKS = registerBlock("fireproof_acacia_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
 
     // end blocks
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return ItemsAll.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}
