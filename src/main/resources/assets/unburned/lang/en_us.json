@@ -8,5 +8,12 @@
   "block.unburned.fireproof_spruce_log": "Fireproof Spruce Log",
   "block.unburned.fireproof_birch_log": "Fireproof Birch Log",
   "block.unburned.fireproof_jungle_log": "Fireproof Jungle Log",
-  "block.unburned.fireproof_acacia_log": "Fireproof Acacia Log"
+  "block.unburned.fireproof_acacia_log": "Fireproof Acacia Log",
+
+  "block.unburned.fireproof_stripped_oak_log": "Fireproof Stripped Oak Log",
+  "block.unburned.fireproof_stripped_dark_oak_log": "Fireproof Stripped Dark Oak Log",
+  "block.unburned.fireproof_stripped_spruce_log": "Fireproof Stripped Spruce Log",
+  "block.unburned.fireproof_stripped_birch_log": "Fireproof Stripped Birch Log",
+  "block.unburned.fireproof_stripped_jungle_log": "Fireproof Stripped Jungle Log",
+  "block.unburned.fireproof_stripped_acacia_log": "Fireproof Stripped Acacia Log"
 }
