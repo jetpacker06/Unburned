@@ -1,6 +1,12 @@
 {
   "item.unburned.fireproofing":"Fireproofing",
-  "block.unburned.fireproof_oak_log": "Fireproof Oak Log",
   "itemGroup.Unburned": "Unburnable",
-  "tooltip.unburned.fireproofing.tooltip": "§o§8Craft with wooden blocks to fireproof them§8§o."
+  "tooltip.unburned.fireproofing.tooltip": "§8Craft with wooden blocks to fireproof them§8.",
+
+  "block.unburned.fireproof_oak_log": "Fireproof Oak Log",
+  "block.unburned.fireproof_dark_oak_log": "Fireproof Dark Oak Log",
+  "block.unburned.fireproof_spruce_log": "Fireproof Spruce Log",
+  "block.unburned.fireproof_birch_log": "Fireproof Birch Log",
+  "block.unburned.fireproof_jungle_log": "Fireproof Jungle Log",
+  "block.unburned.fireproof_acacia_log": "Fireproof Acacia Log"
 }
