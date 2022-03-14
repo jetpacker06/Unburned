@@ -6,9 +6,7 @@ import com.jetpacker06.unburned.base.item.ModCreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -45,10 +43,18 @@ public class VanillaFireproofBlocks {
     //planks
     public static final RegistryObject<Block> FIREPROOF_OAK_PLANKS = registerBlock("fireproof_oak_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_DARK_OAK_PLANKS = registerBlock("fireproof_dark_oak_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_SPRUCE_OAK_PLANKS = registerBlock("fireproof_spruce_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_SPRUCE_PLANKS = registerBlock("fireproof_spruce_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_BIRCH_PLANKS = registerBlock("fireproof_birch_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_JUNGLE_PLANKS = registerBlock("fireproof_jungle_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_ACACIA_PLANKS = registerBlock("fireproof_acacia_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+
+    //slabs
+    public static final RegistryObject<Block> FIREPROOF_OAK_SLAB = registerBlock("fireproof_oak_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_DARK_OAK_SLAB = registerBlock("fireproof_dark_oak_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_SPRUCE_SLAB = registerBlock("fireproof_spruce_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_BIRCH_SLAB = registerBlock("fireproof_birch_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_JUNGLE_SLAB = registerBlock("fireproof_jungle_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_ACACIA_SLAB = registerBlock("fireproof_acacia_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
 
     // end blocks
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return ItemsAll.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}

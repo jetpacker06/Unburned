@@ -22,5 +22,12 @@
   "block.unburned.fireproof_spruce_planks": "Fireproof Spruce Planks",
   "block.unburned.fireproof_birch_planks": "Fireproof Birch Planks",
   "block.unburned.fireproof_jungle_planks": "Fireproof Jungle Planks",
-  "block.unburned.fireproof_acacia_planks": "Fireproof Acacia Planks"
+  "block.unburned.fireproof_acacia_planks": "Fireproof Acacia Planks",
+
+  "block.unburned.fireproof_oak_slab": "Fireproof Oak Slab",
+  "block.unburned.fireproof_dark_oak_slab": "Fireproof Dark Oak Slab",
+  "block.unburned.fireproof_spruce_slab": "Fireproof Spruce Slab",
+  "block.unburned.fireproof_birch_slab": "Fireproof Birch Slab",
+  "block.unburned.fireproof_jungle_slab": "Fireproof Jungle Slab",
+  "block.unburned.fireproof_acacia_slab": "Fireproof Acacia Slab"
 }
