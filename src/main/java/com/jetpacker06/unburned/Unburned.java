@@ -21,6 +21,7 @@ public class Unburned {
     public Unburned() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         VanillaFireproofBlocks.register(eventBus);
         ItemsAll.register(eventBus);
@@ -28,7 +29,7 @@ public class Unburned {
         MinecraftForge.EVENT_BUS.register(this);
     }
     private void clientSetup(final FMLClientSetupEvent event) {
-        //ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_GRASS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_GRASS.get(), RenderType.cutout());
     }
     private void setup(final FMLCommonSetupEvent event){LOGGER.info("HELLO FROM PREINIT");LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
 
