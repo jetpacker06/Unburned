@@ -30,5 +30,12 @@
   "block.unburned.fireproof_spruce_slab": "Fireproof Spruce Slab",
   "block.unburned.fireproof_birch_slab": "Fireproof Birch Slab",
   "block.unburned.fireproof_jungle_slab": "Fireproof Jungle Slab",
-  "block.unburned.fireproof_acacia_slab": "Fireproof Acacia Slab"
+  "block.unburned.fireproof_acacia_slab": "Fireproof Acacia Slab",
+
+  "block.unburned.fireproof_oak_stairs": "Fireproof Oak Stairs",
+  "block.unburned.fireproof_dark_oak_stairs": "Fireproof Dark Oak Stairs",
+  "block.unburned.fireproof_spruce_stairs": "Fireproof Spruce Stairs",
+  "block.unburned.fireproof_birch_stairs": "Fireproof Birch Stairs",
+  "block.unburned.fireproof_jungle_stairs": "Fireproof Jungle Stairs",
+  "block.unburned.fireproof_acacia_stairs": "Fireproof Acacia Stairs"
 }

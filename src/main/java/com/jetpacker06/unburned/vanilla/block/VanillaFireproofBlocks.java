@@ -60,6 +60,14 @@ public class VanillaFireproofBlocks {
     public static final RegistryObject<Block> FIREPROOF_JUNGLE_SLAB = registerBlock("fireproof_jungle_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_ACACIA_SLAB = registerBlock("fireproof_acacia_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
 
+    //stairs
+    public static final RegistryObject<Block> FIREPROOF_OAK_STAIRS = registerBlock("fireproof_oak_stairs", () -> new StairBlock(() -> VanillaFireproofBlocks.FIREPROOF_OAK_PLANKS.get().defaultBlockState() , BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_DARK_OAK_STAIRS = registerBlock("fireproof_dark_oak_stairs", () -> new StairBlock(() -> VanillaFireproofBlocks.FIREPROOF_DARK_OAK_PLANKS.get().defaultBlockState() , BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_SPRUCE_STAIRS = registerBlock("fireproof_spruce_stairs", () -> new StairBlock(() -> VanillaFireproofBlocks.FIREPROOF_SPRUCE_PLANKS.get().defaultBlockState() , BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_BIRCH_STAIRS = registerBlock("fireproof_birch_stairs", () -> new StairBlock(() -> VanillaFireproofBlocks.FIREPROOF_BIRCH_PLANKS.get().defaultBlockState() , BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_JUNGLE_STAIRS = registerBlock("fireproof_jungle_stairs", () -> new StairBlock(() -> VanillaFireproofBlocks.FIREPROOF_JUNGLE_PLANKS.get().defaultBlockState() , BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_ACACIA_STAIRS = registerBlock("fireproof_acacia_stairs", () -> new StairBlock(() -> VanillaFireproofBlocks.FIREPROOF_ACACIA_PLANKS.get().defaultBlockState() , BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)), ModCreativeModeTab.UNBURNED);
+
     // end blocks
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return ItemsAll.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}
     public static void register(IEventBus eventBus) {BLOCKS.register(eventBus);}
