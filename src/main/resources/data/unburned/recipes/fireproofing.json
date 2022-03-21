@@ -1,0 +1,20 @@
+ {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "CCC",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:glass_bottle"
+    },
+    "C": {
+      "item": "unburned:nether_compound"
+    }
+  },
+  "result": {
+    "item": "unburned:fireproofing",
+    "count": 6
+  }
+}

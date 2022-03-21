@@ -1,6 +1,8 @@
 {
   "item.unburned.fireproofing":"Fireproofing",
+  "item.unburned.nether_compound": "Nether Compound",
   "itemGroup.Unburned": "Unburnable",
+
   "tooltip.unburned.fireproofing.tooltip": "§8Craft with wooden blocks to fireproof them§8.",
 
   "block.unburned.fireproof_grass": "Fireproof Grass",
