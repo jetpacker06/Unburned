@@ -41,5 +41,11 @@
   "block.unburned.fireproof_dark_oak_fence": "Fireproof Dark Oak Fence",
   "block.unburned.fireproof_spruce_fence": "Fireproof Spruce Fence",
   "block.unburned.fireproof_birch_fence": "Fireproof Birch Fence",
-  "block.unburned.fireproof_jungle_fence": "Fireproof Jungle Fence"
+  "block.unburned.fireproof_jungle_fence": "Fireproof Jungle Fence",
+  "block.unburned.fireproof_acacia_fence_gate": "Fireproof Acacia Fence Gate",
+  "block.unburned.fireproof_oak_fence_gate": "Fireproof Oak Fence Gate",
+  "block.unburned.fireproof_dark_oak_fence_gate": "Fireproof Dark Oak Fence Gate",
+  "block.unburned.fireproof_spruce_fence_gate": "Fireproof Spruce Fence Gate",
+  "block.unburned.fireproof_birch_fence_gate": "Fireproof Birch Fence Gate",
+  "block.unburned.fireproof_jungle_fence_gate": "Fireproof Jungle Fence Gate"
 }
