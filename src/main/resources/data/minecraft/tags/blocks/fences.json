@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "unburned:fireproof_oak_fence",
+    "unburned:fireproof_dark_oak_fence",
+    "unburned:fireproof_spruce_fence",
+    "unburned:fireproof_birch_fence",
+    "unburned:fireproof_jungle_fence",
+    "unburned:fireproof_acacia_fence"
+  ]
+}

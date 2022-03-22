@@ -12,32 +12,34 @@
   "block.unburned.fireproof_birch_log": "Fireproof Birch Log",
   "block.unburned.fireproof_jungle_log": "Fireproof Jungle Log",
   "block.unburned.fireproof_acacia_log": "Fireproof Acacia Log",
-
   "block.unburned.fireproof_stripped_oak_log": "Fireproof Stripped Oak Log",
   "block.unburned.fireproof_stripped_dark_oak_log": "Fireproof Stripped Dark Oak Log",
   "block.unburned.fireproof_stripped_spruce_log": "Fireproof Stripped Spruce Log",
   "block.unburned.fireproof_stripped_birch_log": "Fireproof Stripped Birch Log",
   "block.unburned.fireproof_stripped_jungle_log": "Fireproof Stripped Jungle Log",
   "block.unburned.fireproof_stripped_acacia_log": "Fireproof Stripped Acacia Log",
-
   "block.unburned.fireproof_oak_planks": "Fireproof Oak Planks",
   "block.unburned.fireproof_dark_oak_planks": "Fireproof Dark Oak Planks",
   "block.unburned.fireproof_spruce_planks": "Fireproof Spruce Planks",
   "block.unburned.fireproof_birch_planks": "Fireproof Birch Planks",
   "block.unburned.fireproof_jungle_planks": "Fireproof Jungle Planks",
   "block.unburned.fireproof_acacia_planks": "Fireproof Acacia Planks",
-
   "block.unburned.fireproof_oak_slab": "Fireproof Oak Slab",
   "block.unburned.fireproof_dark_oak_slab": "Fireproof Dark Oak Slab",
   "block.unburned.fireproof_spruce_slab": "Fireproof Spruce Slab",
   "block.unburned.fireproof_birch_slab": "Fireproof Birch Slab",
   "block.unburned.fireproof_jungle_slab": "Fireproof Jungle Slab",
   "block.unburned.fireproof_acacia_slab": "Fireproof Acacia Slab",
-
   "block.unburned.fireproof_oak_stairs": "Fireproof Oak Stairs",
   "block.unburned.fireproof_dark_oak_stairs": "Fireproof Dark Oak Stairs",
   "block.unburned.fireproof_spruce_stairs": "Fireproof Spruce Stairs",
   "block.unburned.fireproof_birch_stairs": "Fireproof Birch Stairs",
   "block.unburned.fireproof_jungle_stairs": "Fireproof Jungle Stairs",
-  "block.unburned.fireproof_acacia_stairs": "Fireproof Acacia Stairs"
+  "block.unburned.fireproof_acacia_stairs": "Fireproof Acacia Stairs",
+  "block.unburned.fireproof_acacia_fence": "Fireproof Acacia Fence",
+  "block.unburned.fireproof_oak_fence": "Fireproof Oak Fence",
+  "block.unburned.fireproof_dark_oak_fence": "Fireproof Dark Oak Fence",
+  "block.unburned.fireproof_spruce_fence": "Fireproof Spruce Fence",
+  "block.unburned.fireproof_birch_fence": "Fireproof Birch Fence",
+  "block.unburned.fireproof_jungle_fence": "Fireproof Jungle Fence"
 }
