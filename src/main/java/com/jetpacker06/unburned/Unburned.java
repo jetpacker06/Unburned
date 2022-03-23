@@ -30,6 +30,13 @@ public class Unburned {
     }
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_GRASS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_OAK_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_DARK_OAK_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_SPRUCE_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_BIRCH_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_JUNGLE_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_ACACIA_LEAVES.get(), RenderType.cutout());
+
     }
     private void setup(final FMLCommonSetupEvent event){LOGGER.info("HELLO FROM PREINIT");LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
 
