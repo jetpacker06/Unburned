@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:stripped_spruce_log"
+      "item": "minecraft:stripped_dark_oak_wood"
     },
     "U": {
       "item": "unburned:fireproofing"
     }
   },
   "result": {
-    "item": "unburned:fireproof_stripped_spruce_log",
+    "item": "unburned:stripped_fireproof_dark_oak_wood",
     "count": 6
   }
 }
