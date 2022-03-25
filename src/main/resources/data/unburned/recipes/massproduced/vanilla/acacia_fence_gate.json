@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "UUU",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:acacia_fence_gate"
+    },
+    "U": {
+      "item": "unburned:fireproofing"
+    }
+  },
+  "result": {
+    "item": "unburned:fireproof_acacia_fence_gate",
+    "count": 6
+  }
+}
