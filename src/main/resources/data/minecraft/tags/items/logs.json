@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "unburned:fireproof_oak_log",
+    "unburned:fireproof_dark_oak_log",
+    "unburned:fireproof_spruce_log",
+    "unburned:fireproof_birch_log",
+    "unburned:fireproof_jungle_log",
+    "unburned:fireproof_acacia_log",
+    "unburned:fireproof_oak_wood",
+    "unburned:fireproof_dark_oak_wood",
+    "unburned:fireproof_spruce_wood",
+    "unburned:fireproof_birch_wood",
+    "unburned:fireproof_jungle_wood",
+    "unburned:fireproof_acacia_wood",
+    "unburned:fireproof_stripped_oak_log",
+    "unburned:fireproof_stripped_dark_oak_log",
+    "unburned:fireproof_stripped_spruce_log",
+    "unburned:fireproof_stripped_birch_log",
+    "unburned:fireproof_stripped_jungle_log",
+    "unburned:fireproof_stripped_acacia_log",
+    "unburned:fireproof_stripped_oak_wood",
+    "unburned:fireproof_stripped_dark_oak_wood",
+    "unburned:fireproof_stripped_spruce_wood",
+    "unburned:fireproof_stripped_birch_wood",
+    "unburned:fireproof_stripped_jungle_wood",
+    "unburned:fireproof_stripped_acacia_wood"
+  ]
+}

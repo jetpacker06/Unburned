@@ -53,5 +53,19 @@
   "block.unburned.fireproof_spruce_leaves": "Fireproof Spruce Leaves",
   "block.unburned.fireproof_birch_leaves": "Fireproof Birch Leaves",
   "block.unburned.fireproof_jungle_leaves": "Fireproof Jungle Leaves",
-  "block.unburned.fireproof_acacia_leaves": "Fireproof Acacia Leaves"
+  "block.unburned.fireproof_acacia_leaves": "Fireproof Acacia Leaves",
+
+  "block.unburned.fireproof_oak_wood": "Fireproof Oak Wood",
+  "block.unburned.fireproof_dark_oak_wood": "Fireproof Dark Oak Wood",
+  "block.unburned.fireproof_spruce_wood": "Fireproof Spruce Wood",
+  "block.unburned.fireproof_birch_wood": "Fireproof Birch Wood",
+  "block.unburned.fireproof_jungle_wood": "Fireproof Jungle Wood",
+  "block.unburned.fireproof_acacia_wood": "Fireproof Acacia Wood",
+
+  "block.unburned.fireproof_stripped_oak_wood": "Fireproof Stripped Oak Wood",
+  "block.unburned.fireproof_stripped_dark_oak_wood": "Fireproof Stripped Dark Oak Wood",
+  "block.unburned.fireproof_stripped_spruce_wood": "Fireproof Stripped Spruce Wood",
+  "block.unburned.fireproof_stripped_birch_wood": "Fireproof Stripped Birch Wood",
+  "block.unburned.fireproof_stripped_jungle_wood": "Fireproof Stripped Jungle Wood",
+  "block.unburned.fireproof_stripped_acacia_wood": "Fireproof Stripped Acacia Wood"
 }
