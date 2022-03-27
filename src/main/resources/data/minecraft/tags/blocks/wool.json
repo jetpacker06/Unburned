@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "unburned:fireproof_white_wool",
+    "unburned:fireproof_orange_wool",
+    "unburned:fireproof_magenta_wool",
+    "unburned:fireproof_light_blue_wool",
+    "unburned:fireproof_yellow_wool",
+    "unburned:fireproof_lime_wool",
+    "unburned:fireproof_pink_wool",
+    "unburned:fireproof_gray_wool",
+    "unburned:fireproof_light_gray_wool",
+    "unburned:fireproof_cyan_wool",
+    "unburned:fireproof_purple_wool",
+    "unburned:fireproof_blue_wool",
+    "unburned:fireproof_brown_wool",
+    "unburned:fireproof_green_wool",
+    "unburned:fireproof_red_wool",
+    "unburned:fireproof_black_wool"
+  ]
+}

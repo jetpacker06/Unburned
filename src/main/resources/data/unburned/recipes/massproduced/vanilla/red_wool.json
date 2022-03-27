@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "UUU",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:red_wool"
+    },
+    "U": {
+      "item": "unburned:fireproofing"
+    }
+  },
+  "result": {
+    "item": "unburned:fireproof_red_wool",
+    "count": 6
+  }
+}

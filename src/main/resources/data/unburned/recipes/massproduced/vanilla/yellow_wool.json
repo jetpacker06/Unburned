@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "UUU",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:yellow_wool"
+    },
+    "U": {
+      "item": "unburned:fireproofing"
+    }
+  },
+  "result": {
+    "item": "unburned:fireproof_yellow_wool",
+    "count": 6
+  }
+}

@@ -37,7 +37,7 @@ public class VanillaFireproofBlocks {
     public static final RegistryObject<Block> FIREPROOF_OAK_FENCE_GATE = registerBlock("fireproof_oak_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_OAK_WOOD = registerBlock("fireproof_oak_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_STRIPPED_OAK_WOOD = registerBlock("fireproof_stripped_oak_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_OAK_LEAVES = registerBlock("fireproof_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
+    //public static final RegistryObject<Block> FIREPROOF_OAK_LEAVES = registerBlock("fireproof_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
 
     //dark oak
     public static final RegistryObject<Block> FIREPROOF_DARK_OAK_LOG = registerBlock("fireproof_dark_oak_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
@@ -49,7 +49,7 @@ public class VanillaFireproofBlocks {
     public static final RegistryObject<Block> FIREPROOF_DARK_OAK_FENCE_GATE = registerBlock("fireproof_dark_oak_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_DARK_OAK_WOOD = registerBlock("fireproof_dark_oak_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_STRIPPED_DARK_OAK_WOOD = registerBlock("fireproof_stripped_dark_oak_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_DARK_OAK_LEAVES = registerBlock("fireproof_dark_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
+    //public static final RegistryObject<Block> FIREPROOF_DARK_OAK_LEAVES = registerBlock("fireproof_dark_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
 
     //spruce
     public static final RegistryObject<Block> FIREPROOF_SPRUCE_LOG = registerBlock("fireproof_spruce_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
@@ -61,7 +61,7 @@ public class VanillaFireproofBlocks {
     public static final RegistryObject<Block> FIREPROOF_SPRUCE_FENCE_GATE = registerBlock("fireproof_spruce_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_SPRUCE_WOOD = registerBlock("fireproof_spruce_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_STRIPPED_SPRUCE_WOOD = registerBlock("fireproof_stripped_spruce_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_SPRUCE_LEAVES = registerBlock("fireproof_spruce_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
+   // public static final RegistryObject<Block> FIREPROOF_SPRUCE_LEAVES = registerBlock("fireproof_spruce_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
 
     //birch
     public static final RegistryObject<Block> FIREPROOF_BIRCH_LOG = registerBlock("fireproof_birch_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
@@ -73,7 +73,7 @@ public class VanillaFireproofBlocks {
     public static final RegistryObject<Block> FIREPROOF_BIRCH_FENCE_GATE = registerBlock("fireproof_birch_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_BIRCH_WOOD = registerBlock("fireproof_birch_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_STRIPPED_BIRCH_WOOD = registerBlock("fireproof_stripped_birch_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_BIRCH_LEAVES = registerBlock("fireproof_birch_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
+   // public static final RegistryObject<Block> FIREPROOF_BIRCH_LEAVES = registerBlock("fireproof_birch_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
 
     //jungle
     public static final RegistryObject<Block> FIREPROOF_JUNGlE_LOG = registerBlock("fireproof_jungle_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
@@ -85,7 +85,7 @@ public class VanillaFireproofBlocks {
     public static final RegistryObject<Block> FIREPROOF_JUNGLE_FENCE_GATE = registerBlock("fireproof_jungle_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_JUNGLE_WOOD = registerBlock("fireproof_jungle_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_STRIPPED_JUNGLE_WOOD = registerBlock("fireproof_stripped_jungle_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_JUNGLE_LEAVES = registerBlock("fireproof_jungle_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
+   // public static final RegistryObject<Block> FIREPROOF_JUNGLE_LEAVES = registerBlock("fireproof_jungle_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
 
     //acacia
     public static final RegistryObject<Block> FIREPROOF_ACACIA_LOG = registerBlock("fireproof_acacia_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
@@ -97,7 +97,25 @@ public class VanillaFireproofBlocks {
     public static final RegistryObject<Block> FIREPROOF_ACACIA_FENCE_GATE = registerBlock("fireproof_acacia_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_ACACIA_WOOD = registerBlock("fireproof_acacia_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     public static final RegistryObject<Block> FIREPROOF_STRIPPED_ACACIA_WOOD = registerBlock("fireproof_stripped_acacia_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_ACACIA_LEAVES = registerBlock("fireproof_acacia_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
+   // public static final RegistryObject<Block> FIREPROOF_ACACIA_LEAVES = registerBlock("fireproof_acacia_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
+
+    //wool
+    public static final RegistryObject<Block> FIREPROOF_WHITE_WOOL = registerBlock("fireproof_white_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_ORANGE_WOOL = registerBlock("fireproof_orange_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_MAGENTA_WOOL = registerBlock("fireproof_magenta_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_LIGHT_BLUE_WOOL = registerBlock("fireproof_light_blue_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_YELLOW_WOOL = registerBlock("fireproof_yellow_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_LIME_WOOL = registerBlock("fireproof_lime_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_PINK_WOOL = registerBlock("fireproof_pink_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_GRAY_WOOL = registerBlock("fireproof_gray_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_LIGHT_GRAY_WOOL = registerBlock("fireproof_light_gray_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_CYAN_WOOL = registerBlock("fireproof_cyan_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_PURPLE_WOOL = registerBlock("fireproof_purple_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_BLUE_WOOL = registerBlock("fireproof_blue_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_BROWN_WOOL = registerBlock("fireproof_brown_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_GREEN_WOOL = registerBlock("fireproof_green_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_RED_WOOL = registerBlock("fireproof_red_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block> FIREPROOF_BLACK_GRAY_WOOL = registerBlock("fireproof_black_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
 
     // end blocks
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return ItemsAll.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}

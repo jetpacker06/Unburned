@@ -2,8 +2,6 @@ package com.jetpacker06.unburned;
 
 import com.jetpacker06.unburned.base.item.ItemsAll;
 import com.jetpacker06.unburned.vanilla.block.VanillaFireproofBlocks;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,12 +28,12 @@ public class Unburned {
     }
     private void clientSetup(final FMLClientSetupEvent event) {
     //    ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_GRASS.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_OAK_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_DARK_OAK_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_SPRUCE_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_BIRCH_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_JUNGLE_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_ACACIA_LEAVES.get(), RenderType.cutout());
+    //    ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_OAK_LEAVES.get(), RenderType.cutout());
+    //    ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_DARK_OAK_LEAVES.get(), RenderType.cutout());
+    //    ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_SPRUCE_LEAVES.get(), RenderType.cutout());
+    //    ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_BIRCH_LEAVES.get(), RenderType.cutout());
+    //    ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_JUNGLE_LEAVES.get(), RenderType.cutout());
+    //    ItemBlockRenderTypes.setRenderLayer(VanillaFireproofBlocks.FIREPROOF_ACACIA_LEAVES.get(), RenderType.cutout());
 
     }
     private void setup(final FMLCommonSetupEvent event){LOGGER.info("HELLO FROM PREINIT");LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
