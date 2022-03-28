@@ -100,22 +100,26 @@ public class VanillaFireproofBlocks {
    // public static final RegistryObject<Block> FIREPROOF_ACACIA_LEAVES = registerBlock("fireproof_acacia_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
 
     //wool
-    public static final RegistryObject<Block> FIREPROOF_WHITE_WOOL = registerBlock("fireproof_white_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_ORANGE_WOOL = registerBlock("fireproof_orange_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_MAGENTA_WOOL = registerBlock("fireproof_magenta_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_LIGHT_BLUE_WOOL = registerBlock("fireproof_light_blue_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_YELLOW_WOOL = registerBlock("fireproof_yellow_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_LIME_WOOL = registerBlock("fireproof_lime_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_PINK_WOOL = registerBlock("fireproof_pink_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_GRAY_WOOL = registerBlock("fireproof_gray_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_LIGHT_GRAY_WOOL = registerBlock("fireproof_light_gray_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_CYAN_WOOL = registerBlock("fireproof_cyan_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_PURPLE_WOOL = registerBlock("fireproof_purple_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_BLUE_WOOL = registerBlock("fireproof_blue_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_BROWN_WOOL = registerBlock("fireproof_brown_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_GREEN_WOOL = registerBlock("fireproof_green_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_RED_WOOL = registerBlock("fireproof_red_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
-    public static final RegistryObject<Block> FIREPROOF_BLACK_GRAY_WOOL = registerBlock("fireproof_black_wool", () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    public static final RegistryObject<Block>
+            FIREPROOF_WHITE_WOOL = WOOL("fireproof_white_wool"),
+            FIREPROOF_ORANGE_WOOL = WOOL("fireproof_orange_wool"),
+            FIREPROOF_MAGENTA_WOOL = WOOL("fireproof_magenta_wool"),
+            FIREPROOF_LIGHT_BLUE_WOOL = WOOL("fireproof_light_blue_wool"),
+            FIREPROOF_YELLOW_WOOL = WOOL("fireproof_yellow_wool"),
+            FIREPROOF_LIME_WOOL = WOOL("fireproof_lime_wool"),
+            FIREPROOF_PINK_WOOL = WOOL("fireproof_pink_wool"),
+            FIREPROOF_GRAY_WOOL = WOOL("fireproof_gray_wool"),
+            FIREPROOF_LIGHT_GRAY_WOOL = WOOL("fireproof_light_gray_wool"),
+            FIREPROOF_CYAN_WOOL = WOOL("fireproof_cyan_wool"),
+            FIREPROOF_PURPLE_WOOL = WOOL("fireproof_purple_wool"),
+            FIREPROOF_BLUE_WOOL = WOOL("fireproof_blue_wool"),
+            FIREPROOF_BROWN_WOOL = WOOL("fireproof_brown_wool"),
+            FIREPROOF_GREEN_WOOL = WOOL("fireproof_green_wool"),
+            FIREPROOF_RED_WOOL = WOOL("fireproof_red_wool"),
+            FIREPROOF_BLACK_WOOL = WOOL("fireproof_black_wool");
+    public static final RegistryObject<Block> WOOL(String name) {
+        return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+    }
 
     // end blocks
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {return ItemsAll.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));}
