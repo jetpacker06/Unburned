@@ -1,7 +1,7 @@
 package com.jetpacker06.unburned.base.item;
 
 import com.jetpacker06.unburned.Unburned;
-import com.jetpacker06.unburned.base.item.advanced.FireproofingItem;
+import com.jetpacker06.unburned.base.item.custom.FireproofingItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ItemsAll {
+public class AllItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Unburned.MOD_ID);
     //begin items

@@ -7,7 +7,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab UNBURNED = new CreativeModeTab("Unburned") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ItemsAll.FIREPROOFING.get());
+            return new ItemStack(AllItems.FIREPROOFING.get());
         }
     };
 }
