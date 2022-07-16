@@ -1,4 +1,4 @@
-package com.jetpacker06.unburned.base.item.custom;
+package com.jetpacker06.unburned.item.custom;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;

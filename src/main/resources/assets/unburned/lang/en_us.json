@@ -5,7 +5,6 @@
 
   "tooltip.unburned.fireproofing.tooltip": "§8Craft with wooden blocks to fireproof them§8.",
 
-  "block.unburned.fireproof_grass": "Fireproof Grass",
   "block.unburned.fireproof_oak_log": "Fireproof Oak Log",
   "block.unburned.fireproof_dark_oak_log": "Fireproof Dark Oak Log",
   "block.unburned.fireproof_spruce_log": "Fireproof Spruce Log",
@@ -48,12 +47,21 @@
   "block.unburned.fireproof_spruce_fence_gate": "Fireproof Spruce Fence Gate",
   "block.unburned.fireproof_birch_fence_gate": "Fireproof Birch Fence Gate",
   "block.unburned.fireproof_jungle_fence_gate": "Fireproof Jungle Fence Gate",
+
   "block.unburned.fireproof_oak_leaves": "Fireproof Oak Leaves",
   "block.unburned.fireproof_dark_oak_leaves": "Fireproof Dark Oak Leaves",
   "block.unburned.fireproof_spruce_leaves": "Fireproof Spruce Leaves",
   "block.unburned.fireproof_birch_leaves": "Fireproof Birch Leaves",
   "block.unburned.fireproof_jungle_leaves": "Fireproof Jungle Leaves",
   "block.unburned.fireproof_acacia_leaves": "Fireproof Acacia Leaves",
+  "block.unburned.fireproof_grass": "Fireproof Grass",
+  "block.unburned.fireproof_tall_grass": "Fireproof Tall Grass",
+  "block.unburned.fireproof_fern": "Fireproof Fern",
+  "block.unburned.fireproof_large_fern": "Fireproof Large Fern",
+  "block.unburned.fireproof_azalea_leaves": "Fireproof Azalea Leaves",
+  "block.unburned.fireproof_flowering_azalea_leaves": "Fireproof Flowering Azalea Leaves",
+  "block.unburned.fireproof_flowering_azalea": "Fireproof Flowering Azalea",
+  "block.unburned.fireproof_azalea": "Fireproof Azalea",
 
   "block.unburned.fireproof_oak_wood": "Fireproof Oak Wood",
   "block.unburned.fireproof_dark_oak_wood": "Fireproof Dark Oak Wood",

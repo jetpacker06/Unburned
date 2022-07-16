@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "UUU",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:grass"
+    },
+    "U": {
+      "item": "unburned:fireproofing"
+    }
+  },
+  "result": {
+    "item": "unburned:fireproof_grass",
+    "count": 6
+  }
+}

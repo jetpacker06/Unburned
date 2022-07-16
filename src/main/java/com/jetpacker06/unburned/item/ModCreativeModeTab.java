@@ -1,4 +1,4 @@
-package com.jetpacker06.unburned.base.item;
+package com.jetpacker06.unburned.item;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

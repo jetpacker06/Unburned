@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "UUU",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:azalea"
+    },
+    "U": {
+      "item": "unburned:fireproofing"
+    }
+  },
+  "result": {
+    "item": "unburned:fireproof_azalea",
+    "count": 6
+  }
+}

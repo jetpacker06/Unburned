@@ -1,7 +1,7 @@
-package com.jetpacker06.unburned.base.item;
+package com.jetpacker06.unburned.item;
 
 import com.jetpacker06.unburned.Unburned;
-import com.jetpacker06.unburned.base.item.custom.FireproofingItem;
+import com.jetpacker06.unburned.item.custom.FireproofingItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
