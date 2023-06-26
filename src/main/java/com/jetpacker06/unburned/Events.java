@@ -6,16 +6,14 @@ import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -26,9 +24,9 @@ public class Events {
 
     @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, value= Dist.CLIENT, bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientSetupEvents {
-
+        @SuppressWarnings("deprecation")
         @SubscribeEvent
-        public static void blockColorEvent(ColorHandlerEvent.Block event) {
+        public static void blockColorEvent(RegisterColorHandlersEvent.Block event) {
             BlockColors blockcolors = event.getBlockColors();
             blockcolors.register((pState, pBlockAndTintGetter, pPos, p_92639_) -> FoliageColor.getEvergreenColor(), FoliageBlocks.FIREPROOF_SPRUCE_LEAVES.get());
             blockcolors.register((pState, pBlockAndTintGetter, pPos, p_92634_) -> FoliageColor.getBirchColor(), FoliageBlocks.FIREPROOF_BIRCH_LEAVES.get());
@@ -39,8 +37,9 @@ public class Events {
             blockcolors.addColoringState(DoublePlantBlock.HALF, FoliageBlocks.FIREPROOF_LARGE_FERN.get(), FoliageBlocks.FIREPROOF_TALL_GRASS.get());
         }
 
+        @SuppressWarnings("deprecation")
         @SubscribeEvent
-        public static void itemColorEvent(ColorHandlerEvent.Item event) {
+        public static void itemColorEvent(RegisterColorHandlersEvent.Item event) {
             ItemColors itemcolors = event.getItemColors();
             BlockColors blockColors = event.getBlockColors();
             itemcolors.register((pStack, pTintIndex) -> 1);
@@ -56,6 +55,7 @@ public class Events {
                     FoliageBlocks.FIREPROOF_TALL_GRASS.get(), FoliageBlocks.FIREPROOF_LARGE_FERN.get());
         }
         @SubscribeEvent
+        @SuppressWarnings("removal")
         public static void clientSetup(FMLClientSetupEvent event) {
             ItemBlockRenderTypes.setRenderLayer(FoliageBlocks.FIREPROOF_GRASS.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(FoliageBlocks.FIREPROOF_TALL_GRASS.get(), RenderType.cutoutMipped());
@@ -64,5 +64,9 @@ public class Events {
             ItemBlockRenderTypes.setRenderLayer(FoliageBlocks.FIREPROOF_AZALEA.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(FoliageBlocks.FIREPROOF_FLOWERING_AZALEA.get(), RenderType.cutoutMipped());
         }
+    }
+
+    @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, bus=Mod.EventBusSubscriber.Bus.FORGE)
+    public static class ForgeEvents {
     }
 }
