@@ -2,7 +2,7 @@ package com.jetpacker06.unburned.block;
 
 import com.jetpacker06.unburned.Unburned;
 import com.jetpacker06.unburned.item.AllItems;
-import com.jetpacker06.unburned.item.ModCreativeModeTab;
+import com.jetpacker06.unburned.item.Tab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -21,7 +21,7 @@ public class FoliageBlocks {
         FOLIAGE_DR.register(eventBus);
     }
     public static final RegistryObject<Block>
-            //Add fireproof versions of all the decorative foliage
+        //Add fireproof versions of all the decorative foliage
         FIREPROOF_OAK_LEAVES = leavesBlock("fireproof_oak_leaves"),
         FIREPROOF_SPRUCE_LEAVES = leavesBlock("fireproof_spruce_leaves"),
         FIREPROOF_JUNGLE_LEAVES = leavesBlock("fireproof_jungle_leaves"),
@@ -30,14 +30,14 @@ public class FoliageBlocks {
         FIREPROOF_DARK_OAK_LEAVES = leavesBlock("fireproof_dark_oak_leaves"),
         FIREPROOF_AZALEA_LEAVES = leavesBlock("fireproof_azalea_leaves"),
         FIREPROOF_FLOWERING_AZALEA_LEAVES = leavesBlock("fireproof_flowering_azalea_leaves"),
-        FIREPROOF_GRASS = registerBlock("fireproof_grass", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)), ModCreativeModeTab.UNBURNED),
-        FIREPROOF_TALL_GRASS = registerBlock("fireproof_tall_grass", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)), ModCreativeModeTab.UNBURNED),
-        FIREPROOF_FERN = registerBlock("fireproof_fern", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.FERN)), ModCreativeModeTab.UNBURNED),
-        FIREPROOF_LARGE_FERN = registerBlock("fireproof_large_fern", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN)), ModCreativeModeTab.UNBURNED),
-        FIREPROOF_AZALEA = registerBlock("fireproof_azalea", () -> new AzaleaBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA)), ModCreativeModeTab.UNBURNED),
-        FIREPROOF_FLOWERING_AZALEA = registerBlock("fireproof_flowering_azalea", () -> new AzaleaBlock(BlockBehaviour.Properties.copy(Blocks.FLOWERING_AZALEA)), ModCreativeModeTab.UNBURNED);
+        FIREPROOF_GRASS = registerBlock("fireproof_grass", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)), Tab.UNBURNED),
+        FIREPROOF_TALL_GRASS = registerBlock("fireproof_tall_grass", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)), Tab.UNBURNED),
+        FIREPROOF_FERN = registerBlock("fireproof_fern", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.FERN)), Tab.UNBURNED),
+        FIREPROOF_LARGE_FERN = registerBlock("fireproof_large_fern", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN)), Tab.UNBURNED),
+        FIREPROOF_AZALEA = registerBlock("fireproof_azalea", () -> new AzaleaBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA)), Tab.UNBURNED),
+        FIREPROOF_FLOWERING_AZALEA = registerBlock("fireproof_flowering_azalea", () -> new AzaleaBlock(BlockBehaviour.Properties.copy(Blocks.FLOWERING_AZALEA)), Tab.UNBURNED);
     public static RegistryObject<Block> leavesBlock(String name) {
-        return registerBlock(name, () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
+        return registerBlock(name, () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), Tab.UNBURNED);
     }
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = FOLIAGE_DR.register(name, block);
@@ -45,6 +45,6 @@ public class FoliageBlocks {
         return toReturn;
     }
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 }

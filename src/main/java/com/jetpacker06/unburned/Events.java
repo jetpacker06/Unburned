@@ -1,12 +1,18 @@
 package com.jetpacker06.unburned;
 
 import com.jetpacker06.unburned.block.FoliageBlocks;
+import com.jetpacker06.unburned.item.AllItems;
+import com.jetpacker06.unburned.item.Tab;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.DoublePlantBlock;
@@ -14,15 +20,20 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.ArrayList;
 
 public class Events {
- //   @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, value= Dist.DEDICATED_SERVER, bus=Mod.EventBusSubscriber.Bus.MOD)
- //   public static class ServerSetupEvents {}
+    @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, value= Dist.DEDICATED_SERVER, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ServerSetupEvents {}
 
-    @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, value= Dist.CLIENT, bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, value= Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientSetupEvents {
         @SuppressWarnings("deprecation")
         @SubscribeEvent
@@ -65,8 +76,31 @@ public class Events {
             ItemBlockRenderTypes.setRenderLayer(FoliageBlocks.FIREPROOF_FLOWERING_AZALEA.get(), RenderType.cutoutMipped());
         }
     }
+    @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class CommonSetupEvents {
+        @SubscribeEvent
+        public static void onRegisterTabEvent(CreativeModeTabEvent.Register event) {
+            Tab.UNBURNED = event.registerCreativeModeTab(new ResourceLocation(Unburned.MOD_ID), builder ->
+                    builder.icon(() -> new ItemStack(AllItems.FIREPROOFING.get()))
+                            .title(Component.translatable("itemGroup.Unburned")).build()
+            );
+        }
 
-    @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, bus=Mod.EventBusSubscriber.Bus.FORGE)
-    public static class ForgeEvents {
+        public static ArrayList<DeferredRegister<Item>> itemDeferredRegisters = new ArrayList<>();
+        @SubscribeEvent
+        public static void onPopulateTabEvent(CreativeModeTabEvent.BuildContents event) {
+            if (!(event.getTab() == Tab.UNBURNED)) {
+                return;
+            }
+            itemDeferredRegisters.add(AllItems.ITEMS);
+            for (DeferredRegister<Item> deferredRegister : itemDeferredRegisters) {
+                for (RegistryObject<Item> item : deferredRegister.getEntries()) {
+                    event.accept(item);
+                }
+            }
+        }
     }
+
+    @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public static class ForgeEvents {}
 }

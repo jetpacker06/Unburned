@@ -2,7 +2,7 @@ package com.jetpacker06.unburned.block;
 
 import com.jetpacker06.unburned.Unburned;
 import com.jetpacker06.unburned.item.AllItems;
-import com.jetpacker06.unburned.item.ModCreativeModeTab;
+import com.jetpacker06.unburned.item.Tab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -40,7 +40,7 @@ public class WoolBlocks {
             FIREPROOF_RED_WOOL = wool("fireproof_red_wool"),
             FIREPROOF_BLACK_WOOL = wool("fireproof_black_wool");
     private static final RegistryObject<Block> wool(String name) {
-        return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), ModCreativeModeTab.UNBURNED);
+        return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), Tab.UNBURNED);
     }
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = WOOL_DR.register(name, block);
@@ -48,6 +48,6 @@ public class WoolBlocks {
         return toReturn;
     }
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 }
