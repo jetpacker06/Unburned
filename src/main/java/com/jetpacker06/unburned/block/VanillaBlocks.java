@@ -11,6 +11,7 @@ public class VanillaBlocks {
         SPRUCE = registerFireproofWoodType("spruce", eventBus);
         JUNGLE = registerFireproofWoodType("birch", eventBus);
         ACACIA = registerFireproofWoodType("jungle", eventBus);
+        MANGROVE = registerFireproofWoodType("mangrove", eventBus);
     }
 
     public static FireproofWoodType registerFireproofWoodType(String name, IEventBus eventBus) {
@@ -24,4 +25,5 @@ public class VanillaBlocks {
     public static FireproofWoodType SPRUCE;
     public static FireproofWoodType JUNGLE;
     public static FireproofWoodType ACACIA;
+    public static FireproofWoodType MANGROVE;
 }
