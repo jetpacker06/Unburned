@@ -19,12 +19,16 @@ import static com.jetpacker06.unburned.Unburned.log;
 
 public class FireproofWoodType {
     public FireproofWoodType(String name) {
+        this(name, Unburned.MOD_ID);
+    }
+    public FireproofWoodType(String name, String MOD_ID) {
         log("Creating " + name + " wood type...");
-        this.DR = DeferredRegister.create(ForgeRegistries.BLOCKS, Unburned.MOD_ID);
-        this.log = addLogBlock("fireproof_" + name + "_log"); //Add a log block to Minecraft with the name fireproof_name_log
-        this.stripped_log = addLogBlock("fireproof_stripped_" + name + "_log");
+        this.blockDeferredRegister = DeferredRegister.create(ForgeRegistries.BLOCKS, MOD_ID);
+        this.itemDeferredRegister = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
+        this.log = addLogBlock("fireproof_" + name + "_log");
+        this.strippedLog = addLogBlock("fireproof_stripped_" + name + "_log");
         this.wood = addLogBlock("fireproof_" + name + "_wood");
-        this.stripped_wood = addLogBlock("fireproof_stripped_" + name + "_wood");
+        this.strippedWood = addLogBlock("fireproof_stripped_" + name + "_wood");
         this.plank = addPlankBlock("fireproof_" + name + "_planks");
         this.stairs = addStairsBlock("fireproof_" + name + "_stairs", this.plank);
         this.slab = addSlabBlock("fireproof_" + name + "_slab");
@@ -32,18 +36,20 @@ public class FireproofWoodType {
         this.fence_gate = addFenceGateBlock("fireproof_" + name + "_fence_gate");
     }
     public void registerWoodType(IEventBus eventBus) {
-        this.DR.register(eventBus);
+        this.blockDeferredRegister.register(eventBus);
     }
-    private final DeferredRegister<Block> DR;
-    public final RegistryObject<Block> log;
-    public final RegistryObject<Block> stripped_log;
-    public final RegistryObject<Block> wood;
-    public final RegistryObject<Block> stripped_wood;
-    public final RegistryObject<Block> plank;
-    public final RegistryObject<Block> stairs;
-    public final RegistryObject<Block> slab;
-    public final RegistryObject<Block> fence;
-    public final RegistryObject<Block> fence_gate;
+
+    private final DeferredRegister<Block> blockDeferredRegister;
+    private final DeferredRegister<Item> itemDeferredRegister;
+    private final RegistryObject<Block> log;
+    private final RegistryObject<Block> strippedLog;
+    private final RegistryObject<Block> wood;
+    private final RegistryObject<Block> strippedWood;
+    private final RegistryObject<Block> plank;
+    private final RegistryObject<Block> stairs;
+    private final RegistryObject<Block> slab;
+    private final RegistryObject<Block> fence;
+    private final RegistryObject<Block> fence_gate;
     public RegistryObject<Block> addSlabBlock(String name) {
         return registerBlock(name, () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     }
@@ -62,15 +68,56 @@ public class FireproofWoodType {
     public RegistryObject<Block> addLogBlock(String name) {
         return registerBlock(name, () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), ModCreativeModeTab.UNBURNED);
     }
-    public RegistryObject<Block> leavesBlock(String name) {
-        return registerBlock(name, () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.UNBURNED);
-    }
     private <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-        RegistryObject<T> toReturn = this.DR.register(name, block);
+        RegistryObject<T> toReturn = this.blockDeferredRegister.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
     private <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
         return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    }
+
+    public DeferredRegister<Block> getBlockDeferredRegister() {
+        return blockDeferredRegister;
+    }
+
+    public DeferredRegister<Item> getItemDeferredRegister() {
+        return itemDeferredRegister;
+    }
+
+    public RegistryObject<Block> getLog() {
+        return log;
+    }
+
+    public RegistryObject<Block> getStrippedLog() {
+        return strippedLog;
+    }
+
+    public RegistryObject<Block> getWood() {
+        return wood;
+    }
+
+    public RegistryObject<Block> getStrippedWood() {
+        return strippedWood;
+    }
+
+    public RegistryObject<Block> getPlank() {
+        return plank;
+    }
+
+    public RegistryObject<Block> getStairs() {
+        return stairs;
+    }
+
+    public RegistryObject<Block> getSlab() {
+        return slab;
+    }
+
+    public RegistryObject<Block> getFence() {
+        return fence;
+    }
+
+    public RegistryObject<Block> getFence_gate() {
+        return fence_gate;
     }
 }

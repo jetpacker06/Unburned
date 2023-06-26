@@ -1,20 +1,33 @@
- {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "BBB",
-    "CCC",
-    "BBB"
-  ],
-  "key": {
-    "B": {
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    },
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    },
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    },
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    },
+    {
       "item": "minecraft:glass_bottle"
     },
-    "C": {
-      "item": "unburned:nether_compound"
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
     }
-  },
+  ],
   "result": {
     "item": "unburned:fireproofing",
-    "count": 6
+    "count": 4
   }
 }
