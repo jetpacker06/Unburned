@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    },
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    },
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    },
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    },
+    {
+      "tag": "unburned:nether_compound_crafting_materials"
+    }
+  ],
+  "result": {
+    "item": "unburned:nether_compound",
+    "count": 5
+  }
+}
