@@ -21,6 +21,7 @@ public class FoliageBlocks {
         FOLIAGE_DR.register(eventBus);
     }
     public static final RegistryObject<Block>
+            //Add fireproof versions of all the decorative foliage
         FIREPROOF_OAK_LEAVES = leavesBlock("fireproof_oak_leaves"),
         FIREPROOF_SPRUCE_LEAVES = leavesBlock("fireproof_spruce_leaves"),
         FIREPROOF_JUNGLE_LEAVES = leavesBlock("fireproof_jungle_leaves"),

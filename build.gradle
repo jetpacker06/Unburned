@@ -15,7 +15,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.1.1'
+version = "${mod_version}"
 group = 'com.jetpacker06.unburned' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'unburned'
 
