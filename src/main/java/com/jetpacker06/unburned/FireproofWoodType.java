@@ -8,7 +8,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,7 +25,7 @@ public class FireproofWoodType {
         log("Creating " + name + " wood type...");
         this.blockDeferredRegister = DeferredRegister.create(ForgeRegistries.BLOCKS, MOD_ID);
         this.itemDeferredRegister = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
-        Unburned.itemDeferredRegisters.add(this.itemDeferredRegister);
+        Tab.itemDeferredRegisters.add(this.itemDeferredRegister);
 
         this.log = addLogBlock("fireproof_" + name + "_log");
         this.strippedLog = addLogBlock("fireproof_stripped_" + name + "_log");
@@ -54,29 +53,29 @@ public class FireproofWoodType {
     private final RegistryObject<Block> fence;
     private final RegistryObject<Block> fence_gate;
     public RegistryObject<Block> addSlabBlock(String name) {
-        return registerBlock(name, () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), Tab.UNBURNED);
+        return registerBlock(name, () -> new SlabBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)));
     }
     public RegistryObject<Block> addStairsBlock(String name, RegistryObject<Block> fullVariant) {
-        return registerBlock(name, () -> new StairBlock(() -> fullVariant.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), Tab.UNBURNED);
+        return registerBlock(name, () -> new StairBlock(() -> fullVariant.get().defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)));
     }
     public RegistryObject<Block> addPlankBlock(String name) {
-        return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), Tab.UNBURNED);
+        return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)));
     }
     public RegistryObject<Block> addFenceBlock(String name) {
-        return registerBlock(name, () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), Tab.UNBURNED);
+        return registerBlock(name, () -> new FenceBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)));
     }
     public RegistryObject<Block> addFenceGateBlock(String name) {
-        return registerBlock(name, () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE), Tab.UNBURNED);
+        return registerBlock(name, () -> new FenceGateBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     }
     public RegistryObject<Block> addLogBlock(String name) {
-        return registerBlock(name, () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)), Tab.UNBURNED);
+        return registerBlock(name, () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f).explosionResistance(2.0f)));
     }
-    private <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
+    private <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = this.blockDeferredRegister.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
-    private <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
+    private <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 

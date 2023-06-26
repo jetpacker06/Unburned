@@ -1,18 +1,12 @@
 package com.jetpacker06.unburned;
 
 import com.jetpacker06.unburned.block.FoliageBlocks;
-import com.jetpacker06.unburned.item.AllItems;
-import com.jetpacker06.unburned.item.Tab;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.DoublePlantBlock;
@@ -20,14 +14,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
-
-import java.util.ArrayList;
 
 public class Events {
     @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, value= Dist.DEDICATED_SERVER, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -41,7 +30,7 @@ public class Events {
             BlockColors blockcolors = event.getBlockColors();
             blockcolors.register((pState, pBlockAndTintGetter, pPos, p_92639_) -> FoliageColor.getEvergreenColor(), FoliageBlocks.FIREPROOF_SPRUCE_LEAVES.get());
             blockcolors.register((pState, pBlockAndTintGetter, pPos, p_92634_) -> FoliageColor.getBirchColor(), FoliageBlocks.FIREPROOF_BIRCH_LEAVES.get());
-            blockcolors.register((pState, pBlockAndTintGetter, pPos, p_92629_) -> pBlockAndTintGetter != null && pPos != null ? BiomeColors.getAverageFoliageColor(pBlockAndTintGetter, pPos) : FoliageColor.getDefaultColor(), FoliageBlocks.FIREPROOF_OAK_LEAVES.get(), FoliageBlocks.FIREPROOF_JUNGLE_LEAVES.get(), FoliageBlocks.FIREPROOF_ACACIA_LEAVES.get(), FoliageBlocks.FIREPROOF_DARK_OAK_LEAVES.get());
+            blockcolors.register((pState, pBlockAndTintGetter, pPos, p_92629_) -> pBlockAndTintGetter != null && pPos != null ? BiomeColors.getAverageFoliageColor(pBlockAndTintGetter, pPos) : FoliageColor.getDefaultColor(), FoliageBlocks.FIREPROOF_OAK_LEAVES.get(), FoliageBlocks.FIREPROOF_JUNGLE_LEAVES.get(), FoliageBlocks.FIREPROOF_ACACIA_LEAVES.get(), FoliageBlocks.FIREPROOF_DARK_OAK_LEAVES.get(), FoliageBlocks.FIREPROOF_MANGROVE_LEAVES.get());
             blockcolors.register((pState, pBlockAndTintGetter, pPos, p_92649_) -> pBlockAndTintGetter != null && pPos != null ? BiomeColors.getAverageGrassColor(pBlockAndTintGetter, pState.getValue(DoublePlantBlock.HALF) == DoubleBlockHalf.UPPER ? pPos.below() : pPos) : -1, FoliageBlocks.FIREPROOF_LARGE_FERN.get(), FoliageBlocks.FIREPROOF_TALL_GRASS.get());
             blockcolors.register((pState, p_92642_, pPos, p_92644_) -> p_92642_ != null && pPos != null ? BiomeColors.getAverageGrassColor(p_92642_, pPos) : GrassColor.get(0.5D, 1.0D), FoliageBlocks.FIREPROOF_FERN.get(), FoliageBlocks.FIREPROOF_GRASS.get());
 
@@ -60,13 +49,14 @@ public class Events {
             }, FoliageBlocks.FIREPROOF_ACACIA_LEAVES.get(), FoliageBlocks.FIREPROOF_BIRCH_LEAVES.get(),
                     FoliageBlocks.FIREPROOF_DARK_OAK_LEAVES.get(), FoliageBlocks.FIREPROOF_OAK_LEAVES.get(),
                     FoliageBlocks.FIREPROOF_JUNGLE_LEAVES.get(), FoliageBlocks.FIREPROOF_SPRUCE_LEAVES.get(),
-                    FoliageBlocks.FIREPROOF_FERN.get(), FoliageBlocks.FIREPROOF_GRASS.get());
+                    FoliageBlocks.FIREPROOF_MANGROVE_LEAVES.get(), FoliageBlocks.FIREPROOF_FERN.get(),
+                    FoliageBlocks.FIREPROOF_GRASS.get());
 
             itemcolors.register((p_92705_, p_92706_) -> GrassColor.get(0.5D, 1.0D),
                     FoliageBlocks.FIREPROOF_TALL_GRASS.get(), FoliageBlocks.FIREPROOF_LARGE_FERN.get());
         }
         @SubscribeEvent
-        @SuppressWarnings("removal")
+        @SuppressWarnings("deprecation")
         public static void clientSetup(FMLClientSetupEvent event) {
             ItemBlockRenderTypes.setRenderLayer(FoliageBlocks.FIREPROOF_GRASS.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(FoliageBlocks.FIREPROOF_TALL_GRASS.get(), RenderType.cutoutMipped());
@@ -77,29 +67,7 @@ public class Events {
         }
     }
     @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class CommonSetupEvents {
-        @SubscribeEvent
-        public static void onRegisterTabEvent(CreativeModeTabEvent.Register event) {
-            Tab.UNBURNED = event.registerCreativeModeTab(new ResourceLocation(Unburned.MOD_ID), builder ->
-                    builder.icon(() -> new ItemStack(AllItems.FIREPROOFING.get()))
-                            .title(Component.translatable("itemGroup.Unburned")).build()
-            );
-        }
-
-        public static ArrayList<DeferredRegister<Item>> itemDeferredRegisters = new ArrayList<>();
-        @SubscribeEvent
-        public static void onPopulateTabEvent(CreativeModeTabEvent.BuildContents event) {
-            if (!(event.getTab() == Tab.UNBURNED)) {
-                return;
-            }
-            itemDeferredRegisters.add(AllItems.ITEMS);
-            for (DeferredRegister<Item> deferredRegister : itemDeferredRegisters) {
-                for (RegistryObject<Item> item : deferredRegister.getEntries()) {
-                    event.accept(item);
-                }
-            }
-        }
-    }
+    public static class CommonSetupEvents {}
 
     @Mod.EventBusSubscriber(modid = Unburned.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class ForgeEvents {}

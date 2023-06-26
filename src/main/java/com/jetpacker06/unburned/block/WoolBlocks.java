@@ -2,14 +2,11 @@ package com.jetpacker06.unburned.block;
 
 import com.jetpacker06.unburned.Unburned;
 import com.jetpacker06.unburned.item.AllItems;
-import com.jetpacker06.unburned.item.Tab;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -39,15 +36,15 @@ public class WoolBlocks {
             FIREPROOF_GREEN_WOOL = wool("fireproof_green_wool"),
             FIREPROOF_RED_WOOL = wool("fireproof_red_wool"),
             FIREPROOF_BLACK_WOOL = wool("fireproof_black_wool");
-    private static final RegistryObject<Block> wool(String name) {
-        return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)), Tab.UNBURNED);
+    private static RegistryObject<Block> wool(String name) {
+        return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.WOOL).strength(0.8f).explosionResistance(0.8f)));
     }
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = WOOL_DR.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 }

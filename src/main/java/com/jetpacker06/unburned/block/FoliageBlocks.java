@@ -27,24 +27,28 @@ public class FoliageBlocks {
         FIREPROOF_JUNGLE_LEAVES = leavesBlock("fireproof_jungle_leaves"),
         FIREPROOF_ACACIA_LEAVES = leavesBlock("fireproof_acacia_leaves"),
         FIREPROOF_BIRCH_LEAVES = leavesBlock("fireproof_birch_leaves"),
+        FIREPROOF_MANGROVE_LEAVES = leavesBlock("fireproof_mangrove_leaves"),
+        FIREPROOF_MANGROVE_ROOTS = leavesBlock("fireproof_mangrove_roots"),
+        FIREPROOF_CHERRY_LEAVES = leavesBlock("fireproof_cherry_leaves"),
         FIREPROOF_DARK_OAK_LEAVES = leavesBlock("fireproof_dark_oak_leaves"),
         FIREPROOF_AZALEA_LEAVES = leavesBlock("fireproof_azalea_leaves"),
         FIREPROOF_FLOWERING_AZALEA_LEAVES = leavesBlock("fireproof_flowering_azalea_leaves"),
-        FIREPROOF_GRASS = registerBlock("fireproof_grass", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)), Tab.UNBURNED),
-        FIREPROOF_TALL_GRASS = registerBlock("fireproof_tall_grass", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)), Tab.UNBURNED),
-        FIREPROOF_FERN = registerBlock("fireproof_fern", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.FERN)), Tab.UNBURNED),
-        FIREPROOF_LARGE_FERN = registerBlock("fireproof_large_fern", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN)), Tab.UNBURNED),
-        FIREPROOF_AZALEA = registerBlock("fireproof_azalea", () -> new AzaleaBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA)), Tab.UNBURNED),
-        FIREPROOF_FLOWERING_AZALEA = registerBlock("fireproof_flowering_azalea", () -> new AzaleaBlock(BlockBehaviour.Properties.copy(Blocks.FLOWERING_AZALEA)), Tab.UNBURNED);
+        FIREPROOF_GRASS = registerBlock("fireproof_grass", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS))),
+        FIREPROOF_TALL_GRASS = registerBlock("fireproof_tall_grass", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS))),
+        FIREPROOF_FERN = registerBlock("fireproof_fern", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.FERN))),
+        FIREPROOF_LARGE_FERN = registerBlock("fireproof_large_fern", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN))),
+        FIREPROOF_AZALEA = registerBlock("fireproof_azalea", () -> new AzaleaBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA))),
+        FIREPROOF_FLOWERING_AZALEA = registerBlock("fireproof_flowering_azalea", () -> new AzaleaBlock(BlockBehaviour.Properties.copy(Blocks.FLOWERING_AZALEA)));
+
     public static RegistryObject<Block> leavesBlock(String name) {
-        return registerBlock(name, () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), Tab.UNBURNED);
+        return registerBlock(name, () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     }
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = FOLIAGE_DR.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 }
